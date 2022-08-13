@@ -39,13 +39,27 @@ src
 │   ├── Application
 │   │   ├── Command
 │   │   │   ├── CreateAccount
+│   │   │   │   ├── CreateAccountCommand.php
+│   │   │   │   └── CreateAccountHandler.php
 │   │   │   ├── Deposit
+│   │   │   │   ├── DepositCommand.php
+│   │   │   │   └── DepositHandler.php
 │   │   │   ├── Transfer
+│   │   │   │   ├── TransferCommand.php
+│   │   │   │   └── TransferHandler.php
 │   │   │   └── Withdraw
+│   │   │       ├── WithdrawCommand.php
+│   │   │       └── WithdrawHandler.php
 │   │   └── Query
 │   │       ├── GetAccountBalance
+│   │       │   ├── GetAccountBalanceHandler.php
+│   │       │   └── GetAccountBalanceQuery.php
 │   │       ├── GetAllAccounts
+│   │       │   ├── GetAllAccountsHandler.php
+│   │       │   └── GetAllAccountsQuery.php
 │   │       └── GetAllTransactions
+│   │           ├── GetAllTransactionsHandler.php
+│   │           └── GetAllTransactionsQuery.php
 │   ├── Domain
 │   │   ├── Account.php
 │   │   ├── AggregateRoot.php
@@ -67,8 +81,12 @@ src
 │   └── Infrastructure
 │       ├── ReadModel
 │       │   ├── Account
+│       │   │   ├── AccountFetcher.php
+│       │   │   └── AccountItem.php
 │       │   ├── Sort.php
 │       │   └── Transaction
+│       │       ├── TransactionFetcher.php
+│       │       └── TransactionItem.php
 │       └── Repository
 │           ├── AccountRepository.php
 │           └── TransactionRepository.php
@@ -85,10 +103,12 @@ src
     └── Infrastructure
         ├── Bus
         │   ├── Command
+        │   │   └── MessengerCommandBus.php
         │   ├── MessageBusExceptionTrait.php
         │   └── Query
+        │       └── MessengerQueryBus.php
         └── TraitEntityPropertyAccess.php
-        
+
 ```
 
 :arrow_up:[to table of contents](#table-of-contents)
