@@ -2,11 +2,11 @@
 
 ## Table of contents
 
-[1. Project description](#Project description)
+[1. Project description](#Project-description)
 
-[2. Project files](#Project files)
+[2. Project files](#Project-files)
 
-[3. Applied patterns](#Applied patterns)
+[3. Applied patterns](#Applied-patterns)
 
 [4. Stack](#Stack)
 
@@ -22,13 +22,14 @@ The transaction contains a comment, an amount, and a due date.
 Only business logic code.
 
 Methods:
+
 - get all accounts in the system.
 - get the balance of a specific account
 - perform an operation
 - get all account transactions sorted by comment in alphabetical order.
 - get all account transactions sorted by date.
 
-:arrow_up:[to table of contents](#Table of contents)
+:arrow_up:[to table of contents](#table-of-contents)
 
 ## Project files
 
@@ -89,7 +90,8 @@ src
         └── TraitEntityPropertyAccess.php
         
 ```
-:arrow_up:[to table of contents](#Table of contents)
+
+:arrow_up:[to table of contents](#table-of-contents)
 
 ## Applied patterns
 
@@ -100,14 +102,14 @@ src
 - [X] YAGNI
 - [X] DRY
 
-:arrow_up:[to table of contents](#Table of contents)
+:arrow_up:[to table of contents](#table-of-contents)
 
 ## Stack
 
 - [X] PHP 8.1
 - [X] Docker
 
-:arrow_up:[to table of contents](#Table of contents)
+:arrow_up:[to table of contents](#table-of-contents)
 
 ## Commands
 
@@ -118,4 +120,4 @@ src
 | Run Tests        | `make test`    |
 | Run Lints        | `make lint`    |
 
-:arrow_up:[to table of contents](#Table of contents)
+:arrow_up:[to table of contents](#table-of-contents)
