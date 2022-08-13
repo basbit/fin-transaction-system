@@ -12,7 +12,7 @@
 
 [5. Commands](#Commands)
 
-### Project description
+## Project description
 
 Implement a set of classes for managing the financial operations of an account.
 
@@ -28,9 +28,9 @@ Methods:
 - get all account transactions sorted by comment in alphabetical order.
 - get all account transactions sorted by date.
 
-:arrow_up:[to table of contents](_)
+:arrow_up:[to table of contents](#Table of contents)
 
-### Project files
+## Project files
 
 ```shell
 src
@@ -89,9 +89,9 @@ src
         └── TraitEntityPropertyAccess.php
         
 ```
-:arrow_up:[to table of contents](_)
+:arrow_up:[to table of contents](#Table of contents)
 
-### Applied patterns
+## Applied patterns
 
 - [X] SOLID
 - [X] DDD
@@ -100,14 +100,14 @@ src
 - [X] YAGNI
 - [X] DRY
 
-:arrow_up:[to table of contents](_)
+:arrow_up:[to table of contents](#Table of contents)
 
 ## Stack
 
 - [X] PHP 8.1
 - [X] Docker
 
-:arrow_up:[to table of contents](_)
+:arrow_up:[to table of contents](#Table of contents)
 
 ## Commands
 
@@ -118,4 +118,4 @@ src
 | Run Tests        | `make test`    |
 | Run Lints        | `make lint`    |
 
-:arrow_up:[to table of contents](_)
+:arrow_up:[to table of contents](#Table of contents)
