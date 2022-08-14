@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace App\Finance\Infrastructure\ReadModel\Transaction;
 
-use App\Shared\Infrastructure\TraitEntityPropertyAccess;
+use App\Shared\Infrastructure\PropertyAccessorTrait;
 
 final class TransactionItem
 {
-    use TraitEntityPropertyAccess;
+    use PropertyAccessorTrait;
 
     public const SORTABLE_FIELDS = ['dueDate', 'comment'];
 

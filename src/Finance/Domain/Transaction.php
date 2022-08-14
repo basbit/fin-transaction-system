@@ -5,14 +5,17 @@ namespace App\Finance\Domain;
 use App\Finance\Domain\Enum\TransactionType;
 use App\Finance\Domain\Exception\IncompatibleCurrenciesException;
 use App\Finance\Domain\Exception\WrongAmountException;
+use App\Shared\Domain\AggregateRootInterface;
 use DateTime;
 use Money\Money;
 use Symfony\Component\Uid\Uuid;
 
-class Transaction implements AggregateRoot
+/**
+ * Transaction Entity (Aggregate Root)
+ */
+class Transaction implements AggregateRootInterface
 {
     private Uuid $uuid;
-    private DateTime $createdAt;
 
     public function __construct(
         private Account $account,
@@ -30,7 +33,10 @@ class Transaction implements AggregateRoot
         }
 
         $this->uuid = Uuid::v4();
-        $this->createdAt = new DateTime();
+
+        if (null === $this->dueDate) {
+            $this->dueDate = new DateTime();
+        }
     }
 
     public static function deposit(

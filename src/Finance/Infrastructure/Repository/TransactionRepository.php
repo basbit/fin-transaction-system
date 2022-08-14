@@ -14,7 +14,7 @@ class TransactionRepository implements TransactionRepositoryInterface
     /** @var Transaction[] */
     private array $store = [];
 
-    public function findOne(Uuid $uuid): Transaction
+    public function findOneOrThrow(Uuid $uuid): Transaction
     {
         if (!isset($this->store[$uuid->toRfc4122()])) {
             throw new TransactionNotFoundException();

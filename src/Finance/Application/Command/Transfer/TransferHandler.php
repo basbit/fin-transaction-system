@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Finance\Application\Command\Transfer;
 
-use App\Finance\Application\Command\Deposit\DepositCommand;
 use App\Finance\Domain\Repository\AccountRepositoryInterface;
 use App\Finance\Domain\Repository\TransactionRepositoryInterface;
 use App\Finance\Domain\Transaction;

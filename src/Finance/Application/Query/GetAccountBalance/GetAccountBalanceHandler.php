@@ -16,7 +16,7 @@ final class GetAccountBalanceHandler implements QueryHandlerInterface
 
     public function __invoke(GetAccountBalanceQuery $query): array
     {
-        $account = $this->repository->findOneOrThrow($query->uuid);
+        $account = $this->repository->findOneOrThrow($query->accountUuid);
 
         return [
             'currency' => $account->getBalance()->getAmount()->getCurrency(),

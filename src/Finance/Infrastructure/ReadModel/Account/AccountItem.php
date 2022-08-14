@@ -2,11 +2,11 @@
 
 namespace App\Finance\Infrastructure\ReadModel\Account;
 
-use App\Shared\Infrastructure\TraitEntityPropertyAccess;
+use App\Shared\Infrastructure\PropertyAccessorTrait;
 
 final class AccountItem
 {
-    use TraitEntityPropertyAccess;
+    use PropertyAccessorTrait;
 
     public const SORTABLE_FIELDS = ['login'];
 

@@ -41,6 +41,10 @@ use Throwable;
 use function DI\autowire;
 use function DI\get;
 
+/**
+ * This class like bootstrap
+ * here defined DI and MessageBuses
+ */
 abstract class ApplicationTestCase extends TestCase
 {
     private Container $container;
@@ -106,6 +110,9 @@ abstract class ApplicationTestCase extends TestCase
         ];
     }
 
+    /**
+     * Before tests sepUp
+     */
     protected function setUp(): void
     {
         $this->buildContainers();
@@ -119,11 +126,9 @@ abstract class ApplicationTestCase extends TestCase
     }
 
     /**
-     * @return mixed
-     *
      * @throws Throwable
      */
-    protected function ask(QueryInterface $query)
+    protected function ask(QueryInterface $query): mixed
     {
         return $this->queryBus->ask($query);
     }

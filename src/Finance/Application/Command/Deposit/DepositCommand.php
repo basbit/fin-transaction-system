@@ -9,7 +9,6 @@ use App\Shared\Application\Command\CommandInterface;
 use DateTime;
 use Symfony\Component\Uid\Uuid;
 
-use function PHPUnit\Framework\assertArrayHasKey;
 use function PHPUnit\Framework\assertNotEmpty;
 use function PHPUnit\Framework\assertNotNull;
 

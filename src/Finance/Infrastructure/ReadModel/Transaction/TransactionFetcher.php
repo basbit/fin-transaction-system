@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Finance\Infrastructure\ReadModel\Transaction;
 
 use App\Finance\Domain\Repository\TransactionRepositoryInterface;
+use App\Finance\Domain\Transaction;
 use App\Finance\Infrastructure\ReadModel\Sort;
 
 final class TransactionFetcher
@@ -16,10 +17,11 @@ final class TransactionFetcher
 
     public function fetchAll(?Sort $sort): array
     {
-        /** @var \App\Finance\Domain\Transaction[] $transactions */
+        /** @var Transaction[] $transactions */
         $transactions = $this->transactionRepository->findAll();
         $readModels = [];
 
+        // convert entity to array like raw sql
         foreach ($transactions as $transaction) {
             $readModels[$transaction->getUuid()->toRfc4122()] = (new TransactionItem(
                 $transaction->getUuid()->toRfc4122(),

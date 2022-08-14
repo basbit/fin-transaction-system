@@ -6,14 +6,13 @@ namespace App\Finance\Domain\Repository;
 
 use App\Finance\Domain\Transaction;
 use Symfony\Component\Uid\Uuid;
-use App\Finance\Domain\Exception\TransactionNotFoundException;
 
 interface TransactionRepositoryInterface
 {
     /**
      * @throwable TransactionNotFoundException
      */
-    public function findOne(Uuid $uuid): Transaction;
+    public function findOneOrThrow(Uuid $uuid): Transaction;
 
     public function findAll(): array;
 

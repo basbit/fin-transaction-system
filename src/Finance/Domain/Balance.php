@@ -5,12 +5,13 @@ namespace App\Finance\Domain;
 use App\Finance\Domain\Exception\IncompatibleCurrenciesException;
 use App\Finance\Domain\Exception\NotEnoughMoneyException;
 use Money\Money;
-use Symfony\Component\Uid\Uuid;
 
+/**
+ * Balance Entity
+ */
 class Balance
 {
     public function __construct(
-        private Uuid $uuid,
         private Money $amount,
     ) {
     }

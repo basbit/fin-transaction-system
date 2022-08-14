@@ -6,11 +6,13 @@
 
 [2. Project files](#Project-files)
 
-[3. Applied patterns](#Applied-patterns)
+[3. Applied practice](#Applied-practice)
 
-[4. Stack](#Stack)
+[4. Applied patterns](#Applied-patterns)
 
-[5. Commands](#Commands)
+[5. Stack](#Stack)
+
+[6. Commands](#Commands)
 
 ## Project description
 
@@ -113,14 +115,25 @@ src
 
 :arrow_up:[to table of contents](#table-of-contents)
 
-## Applied patterns
+## Applied practice
 
-- [X] SOLID
 - [X] DDD
 - [X] CQRS
+- [X] SOLID
 - [X] KISS
 - [X] YAGNI
 - [X] DRY
+
+:arrow_up:[to table of contents](#table-of-contents)
+
+## Applied patterns
+
+- [X] Command - turns a request (DepositCommand, TransferCommand and etc) into a stand-alone object that contains all
+  information about the request
+- [X] Observer - for handle commands
+- [X] Factory Method - for create new transaction like a deposit or withdraw
+- [X] Composite - allows composing objects Account, Balance and Transactions into a tree-like structure
+- [X] Adapter - for converts the Transaction and Account to read models TransactionItem and AccountItem
 
 :arrow_up:[to table of contents](#table-of-contents)
 

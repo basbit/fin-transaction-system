@@ -9,7 +9,7 @@ use Symfony\Component\Uid\Uuid;
 
 final class GetAccountBalanceQuery implements QueryInterface
 {
-    public function __construct(public Uuid $uuid)
+    public function __construct(public Uuid $accountUuid)
     {
     }
 }

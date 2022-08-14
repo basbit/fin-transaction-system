@@ -8,6 +8,6 @@ class AccountAlreadyExistException extends \DomainException implements \Throwabl
 {
     public function __construct()
     {
-        parent::__construct('Account already exist');
+        parent::__construct('Account already exist.');
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Shared\Infrastructure;
 
-trait TraitEntityPropertyAccess
+trait PropertyAccessorTrait
 {
     public function toArray(bool $isRecursive = true): array
     {

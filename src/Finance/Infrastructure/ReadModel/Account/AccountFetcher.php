@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Finance\Infrastructure\ReadModel\Account;
 
+use App\Finance\Domain\Account;
 use App\Finance\Domain\Repository\AccountRepositoryInterface;
 use App\Finance\Infrastructure\ReadModel\Sort;
 
@@ -16,7 +17,7 @@ final class AccountFetcher
 
     public function fetchAll(?Sort $sort): array
     {
-        /** @var \App\Finance\Domain\Account[] $transactions */
+        /** @var Account[] $transactions */
         $accounts = $this->accountRepository->findAll();
         $readModels = [];
 

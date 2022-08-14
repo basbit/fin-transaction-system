@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Finance\Application\Query\GetAllTransactions;
 
-use App\Finance\Infrastructure\ReadModel\Transaction\TransactionItem;
 use App\Finance\Infrastructure\ReadModel\Sort;
+use App\Finance\Infrastructure\ReadModel\Transaction\TransactionItem;
 use App\Shared\Application\Query\QueryInterface;
 
 use function PHPUnit\Framework\assertContains;

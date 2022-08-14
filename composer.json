@@ -26,12 +26,5 @@
     "psr-4": {
       "Tests\\": "tests/"
     }
-  },
-  "extra": {
-    "phpstan": {
-      "includes": [
-        "extension.neon"
-      ]
-    }
   }
 }

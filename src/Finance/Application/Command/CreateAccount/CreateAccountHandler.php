@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Finance\Application\Command\CreateAccount;
 
-use App\Shared\Application\Command\CommandHandlerInterface;
 use App\Finance\Domain\Account;
 use App\Finance\Domain\Repository\AccountRepositoryInterface;
+use App\Shared\Application\Command\CommandHandlerInterface;
 use Money\Currency;
 use Money\Money;
 

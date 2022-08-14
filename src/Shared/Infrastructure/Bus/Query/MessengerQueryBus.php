@@ -10,7 +10,6 @@ use App\Shared\Infrastructure\Bus\MessageBusExceptionTrait;
 use Symfony\Component\Messenger\Exception\HandlerFailedException;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Symfony\Component\Messenger\Stamp\HandledStamp;
-use Throwable;
 
 final class MessengerQueryBus implements QueryBusInterface
 {
@@ -23,20 +22,17 @@ final class MessengerQueryBus implements QueryBusInterface
         $this->messageBus = $messageBus;
     }
 
-    /**
-     * @throws Throwable
-     */
-    public function ask(QueryInterface $query)
+    public function ask(QueryInterface $query): mixed
     {
         try {
             $envelope = $this->messageBus->dispatch($query);
 
             /** @var HandledStamp $stamp */
             $stamp = $envelope->last(HandledStamp::class);
-
-            return $stamp->getResult();
         } catch (HandlerFailedException $e) {
             $this->throwException($e);
         }
+
+        return $stamp->getResult();
     }
 }

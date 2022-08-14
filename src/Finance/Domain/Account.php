@@ -5,6 +5,9 @@ namespace App\Finance\Domain;
 use Money\Money;
 use Symfony\Component\Uid\Uuid;
 
+/**
+ * Account Entity
+ */
 class Account
 {
     private Balance $balance;
@@ -14,7 +17,7 @@ class Account
         private string $login,
         private Money $amount,
     ) {
-        $this->balance = new Balance(Uuid::v4(), $this->amount);
+        $this->balance = new Balance($this->amount);
     }
 
     public function getBalance(): Balance
